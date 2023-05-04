@@ -1,4 +1,4 @@
-#Função para calcular média aritmética para provas.
+#Obj de calcular média aritmética para provas.
 nome = "Igor"
 idade = 26
 sexo = "Masculino"
