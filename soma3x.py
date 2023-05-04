@@ -1,4 +1,4 @@
-#Função para somar 2 valores e multiplicar o resultado por um terceiro valor
+#Obj de somar 2 valores e multiplicar o resultado por um terceiro valor
 v1= 100
 v2= 200
 v3= 300

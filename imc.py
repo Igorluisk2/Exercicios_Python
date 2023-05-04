@@ -1,4 +1,4 @@
-#Função para calcular IMC
+#Obj de calcular IMC
 nome = "Igor"
 idade = 26
 peso = 88
