@@ -103,7 +103,7 @@ while True:
     else:
         print("\nNumero invalido\n-----Tente Novamente-----\n")'''
 
-nomes = ["pedro","João","Leticia",[1]]
+'''nomes = ["pedro","João","Leticia",[1]]
 sub = nomes [-1]
 for n in sub:
     print(n)
@@ -151,7 +151,7 @@ for num in range (1,10):
 #1
 
 for z2 in range(0,102,2):
-    print(z2)
+    print(z2)'''
 
 #2
 
