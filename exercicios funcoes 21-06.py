@@ -48,11 +48,13 @@ while True:
     if repetir.upper() != "S":
         break'''
 
-#5 Faça um programa que use a função valorPagamento para determinar o valor a ser pago por uma prestação de uma conta. O programa deverá solicitar ao usuário o valor da prestação e o
-# número de dias em atraso e passar estes valores para a função valorPagamento, que calculará o valor a ser pago e devolverá este valor ao programa que a chamou. O programa deverá então
-# exibir o valor a ser pago na tela. Após a execução programa deverá ser encerrado, exibindo o relatorio do dia,
-# que conterá a quantidade e o valor totral de prestações pagas no dia. O cálcilo do valor a ser pago é feito da seguinte forma.
-# Para pagamentos sem atraso, cobrar o valor da prestação. Quando houver atraso, cobrar 3% de multa, mais 0,1% de juros por dia de atraso.
+'''
+5 Faça um programa que use a função valorPagamento para determinar o valor a ser pago por uma prestação de uma conta. O programa deverá solicitar ao usuário o valor da prestação e o
+número de dias em atraso e passar estes valores para a função valorPagamento, que calculará o valor a ser pago e devolverá este valor ao programa que a chamou. O programa deverá 
+então exibir o valor a ser pago na tela. Após a execução programa deverá ser encerrado, exibindo o relatorio do dia,que conterá a quantidade e o valor totral 
+de prestações pagas no dia. O cálculo do valor a ser pago é feito da seguinte forma.Para pagamentos sem atraso, cobrar o valor da prestação. 
+Quando houver atraso, cobrar 3% de multa, mais 0,1% de juros por dia de atraso.
+'''
 
 def valorPagamento(valor_prestacao, dias_atraso):
     if dias_atraso == 0:
