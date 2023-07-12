@@ -1,0 +1,13 @@
+from ex_class_retangulo_conta_12_07 import *
+while True:
+    base=float(input("Base: "))
+    altura=float(input("Altura: "))
+    op=int(input("1- Área\n2- Perimetro\n3- Rodapé\n---"))
+    r1=ex_class_retangulo_conta_12_07(base,altura)
+
+    if op==1:
+        r1.area()
+    if op==2:
+        r1.perimetro()
+    if op==3:
+        r1.rodape()

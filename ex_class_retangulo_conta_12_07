@@ -1,0 +1,15 @@
+def __init__(self,base,altura):
+    self.base=base
+    self.altura=altura
+
+
+def area(self):
+    print(self.base*self.altura)
+
+
+def perimetro (self):
+    print((self.base+self.altura))*2
+
+
+def rodape(self):
+    print((self.base*self.altura)*0.15)
