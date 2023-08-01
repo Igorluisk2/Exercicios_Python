@@ -25,4 +25,4 @@ class Aluno(Pessoa):
         print(12*"-")
 
 x = Pessoa("Ederson", "?","Senac", "Campo Grande", "MS")
-y = Aluno("TI", "Igor", 27,"Senac", "Campo Grande", "MS" )
+y = Aluno("TI", "Igor", 27,"Senac", "Campo Grande", "MS" )6
