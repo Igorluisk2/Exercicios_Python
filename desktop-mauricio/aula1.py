@@ -17,94 +17,56 @@ janela = MainWindow()
 janela.show()
 app.exec()'''
 
-
-'''from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QLabel
+#1
+'''from typing import Optional
+from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QLineEdit
 from PySide6.QtCore import QSize, Qt
 import sys
 
 class MainWindow(QMainWindow):
-    
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Fazemos Programa") 
-        self.setFixedSize(900, 600)
-        self.lbl = QLabel("Fazemos Programa, cobramos barato")
-        fonte = self.lbl.font()
-        fonte.setPointSize(40)
-        self.lbl.setFont(fonte)
+        self.setWindowTitle("Vai ficar pior")
+        self.setFixedSize(QSize(600,400))
+        self.lbl = QLabel("Hello World")
+        font = self.lbl.font()
+        font.setPointSize(35)
+        self.lbl.setFont(font)
         self.lbl.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
         self.setCentralWidget(self.lbl)
-                
-        # self.setWindowTitle("Ola Mundo")
-        # botao = QPushButton("Eu sou um botão")
-        # self.setCentralWidget(botao)
-        # botao.clicked.connect(self.imprimir)
-       
-#     def imprimir(self):
-#         print("Bruno")
-        
-app = QApplication(sys.argv)
 
+app = QApplication(sys.argv)
 janela = MainWindow()
-janela.resize(900, 600)
 janela.show()
 app.exec()'''
 
-'''from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QLabel
+#2
 from PySide6.QtCore import QSize, Qt
+from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QLineEdit , QPushButton
 import sys
 
+
 class MainWindow(QMainWindow):
-    
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Exercicio 2") 
-        self.button = QPushButton("Botão",self)
-        self.button.setGeometry(190,10,500,70)
+        self.setWindowTitle("EXERCÍCIO 2")
+        self.setFixedSize(1000,800)
+        self.button=QPushButton("Botão", self)
+        self.button.setGeometry(190,10,100,70)
         self.result_label = QLabel(self)
-        self.result_label.setGeometry(10,90,200,30)
-        
+        self.result_label.setGeometry(10,90,280,30)
         self.button.clicked.connect(self.imprimir)
         
     def imprimir(self):
-        numero = 5
-        if numero % 2 == 0:
-            self.result_label.setText(f"Este numero é {numero} par")
+        num = 18
+        if num % 2 == 0:
+            self.result_label.setText(f"Este número é par: {num}")
         else:
-            self.result_label.setText(f"Este numero é {numero} impar")        
+            self.result_label.setText(f"Este número é ímpar: {num}")
+            
+            
 app = QApplication(sys.argv)
-
 janela = MainWindow()
-janela.resize(900, 600)
-janela.show()
-app.exec()'''
-
-
-from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QLabel
-from PySide6.QtCore import QSize, Qt
-import sys
-
-class MainWindow(QMainWindow):
-    
-    def __init__(self):
-        super().__init__()
-        self.setWindowTitle("Exercicio 3") 
-        self.button = QPushButton("Botão",self)
-        self.button.setGeometry(190,10,500,70)
-        self.result_label = QLabel(self)
-        self.result_label.setGeometry(10,90,200,30)
-        
-        self.button.clicked.connect(self.imprimir)
-        
-    def imprimir(self):
-        numero = 5
-        if numero % 2 == 0:
-            self.result_label.setText(f"Este numero é {numero} par")
-        else:
-            self.result_label.setText(f"Este numero é {numero} impar")        
-app = QApplication(sys.argv)
-
-janela = MainWindow()
-janela.resize(900, 600)
 janela.show()
 app.exec()
+
