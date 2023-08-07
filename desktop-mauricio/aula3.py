@@ -179,7 +179,7 @@ class MainWindow(QMainWindow):
         self.input3.setGeometry(70,90,100,30)
         # Botão
         
-        self.botao = QPushButton("Calcular",self)
+        self.botao = QPushButton("Concluir",self)
         self.botao.setGeometry(0, 570, 500, 24)
         # self.botao.clicked.connect(self.imprimir)
         # CheckBox
@@ -190,7 +190,7 @@ class MainWindow(QMainWindow):
         self.check = QCheckBox("Masculino")
         self.check.setGeometry(200, 130, 30, 20)
         
-        self.check2 = QCheckBox(self)
+        self.check2 = QCheckBox("Fake Natty?")
         self.check2.setGeometry(0, 0, 0, 0)
         
         layout = QVBoxLayout()
