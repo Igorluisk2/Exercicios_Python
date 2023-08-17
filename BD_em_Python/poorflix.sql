@@ -19,7 +19,7 @@ primary key(mes_ano)
 
 create table Video(
 titulo varchar (40) not null,
-ano varchar (30) not null,
+ano date not null,
 duração varchar (30) not null,
 produtora varchar (30) not null,
 tipo varchar (30) not null,
@@ -34,3 +34,9 @@ data_nasci date not null,
 local_nasci varchar(30) not null,
 primary key(nome)
 );
+
+alter table Vídeo  #renomeia o nome da tabela
+change ano Ano date; #renomea o nome do atributo da tabela escolhida
+
+alter table Ator add column id_prof int first #adc uma nova coluna
+alter table Ator drop column id_prof; #retira uma coluna
