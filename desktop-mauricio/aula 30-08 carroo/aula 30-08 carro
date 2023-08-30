@@ -1,0 +1,26 @@
+class Carro():
+
+    def __init__(self,modelo,marca):
+        
+        self.modelo = modelo
+        self.marca = marca
+        
+    def acelerar(self):
+        print("acelerou")
+    
+    def freiar(self):
+        print("freiou")
+            
+    def passar_marcha(self,marcha):
+        self.marcha=marcha
+        print(f"O carro passou para {marcha}")
+        
+carro1=Carro("skyline-r34","Nissan")
+print(carro1.modelo)
+print(carro1.marca)
+carro1.passar_marcha(1)
+
+carro2=Carro("Golf","Wolkswagen")
+print(carro2.modelo)
+print(carro2.marca)
+carro2.passar_marcha(6)
