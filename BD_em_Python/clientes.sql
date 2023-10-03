@@ -14,16 +14,11 @@ id_nacionalidade int,
 id_raca int,
 id_escolaridade int,
 constraint fk_estado foreign key (id_estado) references estado (id_estado),
-constraint fk_cidade foreign key (id_cidade) references estado (id_cidade),
-constraint fk_sexo foreign key (id_sexo) references estado (id_sexo),
-constraint fk_nacionalidade foreign key (id_nacionalidade) references estado (id_nacionalidade),
-constraint fk_raca foreign key (id_raca) references estado (id_raca),
-constraint fk_escolaridade foreign key (id_escolaridade) references estado (id_escolaridade),
-
-
-
-
-
+constraint fk_cidade foreign key (id_cidade) references cidade (id_cidade),
+constraint fk_sexo foreign key (id_sexo) references sexo (id_sexo),
+constraint fk_nacionalidade foreign key (id_nacionalidade) references nacionalidade (id_nacionalidade),
+constraint fk_raca foreign key (id_raca) references raca (id_raca),
+constraint fk_escolaridade foreign key (id_escolaridade) references escolaridade (id_escolaridade)
 );
 
 create table estado(
@@ -41,8 +36,6 @@ create table sexo(
 id_sexo int auto_increment primary key,
 sexo varchar(30)
 
-
-
 );
 
 create table nacionalidade (
@@ -59,6 +52,34 @@ create table escolaridade (
 id_escolaridade int auto_increment primary key,
 escolaridade varchar(30)
 );
+
+#-------------------------------------------#
+#           Cadastros de Clente             #
+#-------------------------------------------#
+
+insert into clientes values (null, "09583810037", "Ana", "428779086", "(82) 98135-7863", null, null, null, null, null, null);
+insert into clientes values (null, "61416831002", "Bruno", "339219397", "(64) 99114-1603", null, null, null, null, null, null);
+insert into clientes values (null, "05665108049", "Carlos", "339219397", "(92) 99527-4776", null, null, null, null, null, null);
+insert into clientes values (null, "27595409012", "Dantener", "434228977", "(86) 97618-7381", null, null, null, null, null, null);
+insert into clientes values (null, "27056934080", "Eduardo", "217934687", "(67) 99785-3276", null, null, null, null, null, null);
+insert into clientes values (null, "44123831052", "Ederson", "349681375", "(94) 96733-4290", null, null, null, null, null, null);
+insert into clientes values (null, "82669259090", "Fernando", "310164771", "(66) 98532-8113", null, null, null, null, null, null);
+insert into clientes values (null, "55433747042", "Gabriel", "272143996", "(92) 97454-7042", null, null, null, null, null, null);
+insert into clientes values (null, "94648170032", "Hentony", "177391820", "(94) 96705-3530", null, null, null, null, null, null);
+insert into clientes values (null, "73600809083", "Jade", "256051124", "(84) 97225-9129", null, null, null, null, null, null);
+insert into clientes values (null, "79690454056", "Kauanny", "490893867", "(35) 98643-4301", null, null, null, null, null, null);
+insert into clientes values (null, "87395177053", "Kaua", "389643476", "(84) 98329-1581", null, null, null, null, null, null);
+insert into clientes values (null, "75981349018", "Larissa", "389643476", "(97) 97166-8275", null, null, null, null, null, null);
+insert into clientes values (null, "79798865006", "Mauricio", "471014606", "(69) 98581-3205", null, null, null, null, null, null);
+insert into clientes values (null, "43492892086", "Naíara", "295559895", "(94) 99544-3337", null, null, null, null, null, null);
+insert into clientes values (null, "22613667010", "Osvaldo", "378826402", "(24) 96916-4413", null, null, null, null, null, null);
+insert into clientes values (null, "36373824071", "Pedro", "101587004", "(94) 99813-2432", null, null, null, null, null, null);
+insert into clientes values (null, "79692507009", "Paulo", "165149115", "(86) 98355-8924", null, null, null, null, null, null);
+insert into clientes values (null, "45872764057", "Quiteria", "302793781", "(91) 97170-1334", null, null, null, null, null, null);
+insert into clientes values (null, "23571860039", "Raimundo", "340782304", "(83) 98834-6310", null, null, null, null, null, null);
+insert into clientes values (null, "59034408000", "Sarah", "108642379", "(97) 98024-2476", null, null, null, null, null, null);
+insert into clientes values (null, "45872764057", "Thiago", "505502707", "(88) 99846-9398", null, null, null, null, null, null);
+insert into clientes values (null, "58828179007", "Uriel", "252298032", "(88) 99846-9398", null, null, null, null, null, null);
 
 				/*inserts*/
 
@@ -291,8 +312,8 @@ insert into sexo values (null, "Masculino");
 insert into sexo values (null, "Apache");
 
 	/*Nacionalidade */
-    insert into nacionalidade values (null, "Brasileira");
-    insert into raca values (null, "Estrangeira");
+insert into nacionalidade values (null, "Brasileira");
+insert into nacionalidade values (null, "Estrangeira");
 
 	/* raça */
 insert into raca values (null, "Preto");
@@ -311,9 +332,30 @@ insert into escolaridade values (null, "Ensino Superior Mestrado");
 insert into escolaridade values (null, "Ensino Superior Doutorado");
 insert into escolaridade values (null, "Educação Continuada");
 
-			/*selects */
+			/* selects */
 select clientes.nome, cidade.cidade from clientes join cidade on clientes.id_cliente = cidade.id_cidade;
-select clientes.nome, estado.estado from clientes join estado on clientes.id_cliente = cidade.id_estado;
+select clientes.nome, estado.estado from clientes join estado on clientes.id_cliente = estado.id_estado;
+select clientes.nome, clientes.cpf, raca.raca  from clientes join raca on clientes.id_cliente = raca.id_raca;
+select clientes.nome, nacionalidade.nacionalidade from clientes join nacionalidade on clientes.id_cliente = nacionalidade.id_nacionalidade;
+select clientes.nome, escolaridade.escolaridade from clientes join escolaridade on clientes.id_cliente = escolaridade.id_escolaridade;
+select clientes.nome, estado.estado, cidade.cidade from clientes inner join estado on clientes.id_cliente = estado.id_estado inner join cidade on estado.id_estado = cidade.id_cidade;
+
+select clientes.nome, cidade.cidade, estado.estado, clientes.fone, clientes.rg, sexo.sexo, nacionalidade.nacionalidade, raca.raca, escolaridade.escolaridade from clientes inner join cidade on cidade.id_cidade = clientes.id_cliente 
+inner join estado on clientes.id_cliente = estado.id_estado inner join sexo on sexo.id_sexo = clientes.id_cliente inner join nacionalidade on nacionalidade.id_nacionalidade = clientes.id_cliente 
+inner join raca on raca.id_raca = clientes.id_cliente inner join escolaridade on escolaridade.id_escolaridade = clientes.id_cliente;
+
+
+		/* updates */
+update cidade set cidade = "Abaixo de M" where cidade like "a%";
+update nacionalidade set nacionalidade = "Fora do Brasil" Where nacionalidade = "Estrangeira";
+update raca set raca = "Serese Humanos";
+update estado set estado = "Centro Oeste" where estado = "Mato Grosso do Sul";
+update estado set estado = "Centro Oeste" where estado = "Mato Grosso";
+update estado set estado = "Centro Oeste" where estado = "Goias";
+update estado set estado = "Centro Oeste" where estado = "Distrito Federal";
+
+
+
 
 
 
