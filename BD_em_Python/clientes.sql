@@ -354,12 +354,16 @@ update estado set estado = "Centro Oeste" where estado = "Mato Grosso";
 update estado set estado = "Centro Oeste" where estado = "Goias";
 update estado set estado = "Centro Oeste" where estado = "Distrito Federal";
 
+select * from nacionalidade;
+		/* Delete's */
 
 
 
+select clientes.nome from clientes;
+delete from clientes where nome = 'Quiteria';
+delete from clientes where nome = 'Raimundo';
 
-
-
+select * from clientes;
 
 
 
