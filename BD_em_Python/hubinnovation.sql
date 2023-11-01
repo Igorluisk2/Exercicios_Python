@@ -22,15 +22,15 @@ create table palestra(
     nomepale varchar(255),
 	vagas int,
     descricao varchar(655),
-    sala int,
-    imagem varchar(255),
-    insta varchar(255),
-    linkedin varchar (255)
+    sala int
 );
 
 
 /*		Cadastro		*/
 insert into cadastro values(1,"Mario", "mario@gmail.com", 67991295332, 10987612312, "2005-06-10", "Atras do armario",1);
+insert into cadastro values(2,"Igor", "igor@gmail.com", 67992913452, 02369612177, "1996-05-14", "Masculino",2);
+insert into cadastro values(3,"Josefa", "josefa@gmail.com", 67991295349, 10987612358, "2006-07-12", "Feminino",3);
+insert into cadastro values(44,"kelly","lly@hotmail.com",67992913452,02369612177,"1994-04-24","Feminino",4);
 
 /*		Palestra		*/
 insert into palestra values(1,"Creative cut-Freestyle livre","Dias Barber", 20, "Workshop para você barbeiro, quer transformar seus cortes de cabelo em uma “obra de arte”? Então você precisa estar neste workshop, aprendendo técnicas diferenciadas e tendências do estilo freestyle. Agregue valor ao seu trabalho e surpreenda o seu cliente!", 306);
