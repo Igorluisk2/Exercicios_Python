@@ -4,7 +4,6 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.textinput import TextInput
 from kivy.uix.screenmanager import Screen, ScreenManager
-
 from random import randint
 
 
@@ -20,8 +19,10 @@ class AdivinheNumero(Screen):
         self.reset_button = Button(text='Resetar Jogo', font_size=20)
         self.reset_button.bind(on_press=self.reset_game)
         
+        
         self.menu_button = Button(text='Voltar para o Menu', font_size=20)
         self.menu_button.bind(on_press=self.switch_to_menu)  
+        
         
         layout.add_widget(self.result_label)
         layout.add_widget(self.input_text)
@@ -31,13 +32,16 @@ class AdivinheNumero(Screen):
         self.add_widget(layout)
         self.reset_game()  
 
+
     def switch_to_menu(self, *args):  
         self.manager.current = 'main_menu'
+
         
     def reset_game(self, *args):
         self.number = randint(1, 100)
         self.result_label.text = 'Digite um número entre 1 e 100'
         self.input_text.text = ''
+
 
     def check_guess(self, instance):
         try:

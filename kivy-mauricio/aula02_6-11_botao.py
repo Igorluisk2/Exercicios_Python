@@ -26,14 +26,14 @@ class Bot(App):
         grid.add_widget(self.btn_dog)
         grid.add_widget(self.btn_cat)
         
-        self.btn_dog.bind(on_press = self.pug)
+        self.btn_dog.bind(on_press = self.doge)
         self.btn_cat.bind(on_press = self.gato)
         
         
         layout.add_widget(grid)
     
         return layout
-    def pug(self, img1):
+    def doge(self, img1):
         self.img1.opacity = 1
         self.img2.opacity = 0
         self.btn_dog.background_color = (0, 1, 0, 1)

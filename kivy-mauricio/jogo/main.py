@@ -4,8 +4,9 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.textinput import TextInput
 from kivy.uix.screenmanager import Screen, ScreenManager
-
 from random import randint
+from logica import AdivinheNumero
+
 
 class MainMenu(Screen):
     def __init__(self, **kwargs):
@@ -19,10 +20,9 @@ class MainMenu(Screen):
         layout.add_widget(self.exit_button)
         self.add_widget(layout)
 
+
     def switch_to_game(self, *args):
         self.manager.current = 'game'
-
-
 
 
 class AdivinheAPP(App):
@@ -31,6 +31,7 @@ class AdivinheAPP(App):
         screen_manager.add_widget(MainMenu(name='main_menu'))
         screen_manager.add_widget(AdivinheNumero(name='game'))
         return screen_manager
+    
     
 if __name__ == '__main__':
     AdivinheAPP().run()
