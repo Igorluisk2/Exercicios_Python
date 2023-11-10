@@ -9,8 +9,8 @@ import mysql.connector
 class ConectandoBanco():
     def __init__(self) -> None:
         
-        self.banco1 = mysql.connector.connect(user='gleison', password='12345',
-                                    host='10.28.1.129', database="kivyaplication")
+        self.banco1 = mysql.connector.connect(user='suporte', password='suporte',
+                                   #host='10.28.1.129', database="kivyaplication")
 
         if self.banco1.is_connected():
             database_info = self.banco1.get_server_info()
