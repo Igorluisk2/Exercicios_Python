@@ -1,42 +1,61 @@
-'''import _mysql_connector
-
-connect'''
-
-#subtituir dados
-
 import mysql.connector
 
-class ConectandoBanco():
-    def __init__(self) -> None:
-        
-        self.banco1 = mysql.connector.connect(user='suporte', password='suporte',
-                                   #host='10.28.1.129', database="kivyaplication")
-
-        if self.banco1.is_connected():
-            database_info = self.banco1.get_server_info()
-            print(f"Conectado ao Banco de dados = {database_info}")
-
-        consulta_mysql = "select * from cadastro"
-        self.cursor = self.banco1.cursor()
-        self.cursor.execute(consulta_mysql)
-        resultados = self.cursor.fetchall()
-
-        print(f"Numero total de registros retornados: {self.cursor.rowcount}")
-
-    def insert_values(self, nome, cpf, senha, gmail):
-        self.today = "INSERT INTO cadastro (nome, cpf, senha, gmail) VALUES (%s, %s, %s, %s)"
-        self.values = (nome, cpf, senha, gmail)
+connect = mysql.connector.connect(
     
-        self.cursor.close()
-        self.cursor = self.banco1.cursor()
-        self.cursor.execute(self.today, self.values)
+    host = "10.28.1.213",
+    user = "suporte",
+    password = "suporte",
+    database = "deckshop"
+    
+)
 
-        self.banco1.commit()
-        print(self.cursor.rowcount, "registro(s) inserido(s).")
+class BancoD():
+    def __init__(self):
+        self.cursor = connect.cursor()
+       
         
+    # INSERT
+    def insert_table(self, nome, quant):
+        sql = "INSERT INTO produtos (nome, quantidade) VALUES (%s, %s)"
+        val = (nome, quant)
+        self.cursor.execute(sql, val)
+        connect.commit()
+        print(self.cursor.rowcount, "registro(s) inserido(s).")
 
-    def fechar_conexao(self):
-        if self.banco1.is_connected():
-            self.banco1.close()
-            print("Conexão encerrada")
-            print("-="*20)
+    # SELECTS
+    def select_table(self):
+        self.cursor.execute("SELECT * FROM produtos")
+        myresult = self.cursor.fetchall()
+        for x in myresult:
+            pass
+        
+    def select_id_table(self, id):
+        comando = "SELECT nome FROM produtos WHERE id = %s"
+        self.cursor.execute(comando, (id,))
+        myresult = self.cursor.fetchall()
+        for x in myresult:
+            for self.i in x:
+                pass
+        
+        comando = "SELECT quantidade FROM produtos WHERE id = %s"
+        self.cursor.execute(comando, (id,))
+        myresult = self.cursor.fetchall()
+        for x in myresult:
+            for self.a in x:
+                pass
+        
+    # UPDATE
+    def update_table(self, nome, quant, id_mudar):
+        sql = "UPDATE produtos SET nome = %s, quantidade = %s WHERE id = %s"
+        val = (nome, quant, id_mudar)
+        self.cursor.execute(sql, val)
+        connect.commit()
+        print(self.cursor.rowcount, "registro(s) atualizado(s).")
+
+    # DELETE
+    def delete(self, id):
+        sql = "DELETE FROM produtos WHERE id = %s"
+        val = (id,)
+        self.cursor.execute(sql, val)
+        connect.commit()
+        print(self.cursor.rowcount, "registro(s) excluído(s).")
