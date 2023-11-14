@@ -20,7 +20,6 @@ class BancoD():
         val = (nome, quant)
         self.cursor.execute(sql, val)
         connect.commit()
-        print(self.cursor.rowcount, "registro(s) inserido(s).")
 
     # SELECTS
     def select_table(self):
@@ -50,7 +49,6 @@ class BancoD():
         val = (nome, quant, id_mudar)
         self.cursor.execute(sql, val)
         connect.commit()
-        print(self.cursor.rowcount, "registro(s) atualizado(s).")
 
     # DELETE
     def delete(self, id):
@@ -58,4 +56,4 @@ class BancoD():
         val = (id,)
         self.cursor.execute(sql, val)
         connect.commit()
-        print(self.cursor.rowcount, "registro(s) excluído(s).")
+        

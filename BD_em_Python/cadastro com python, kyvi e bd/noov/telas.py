@@ -1,28 +1,16 @@
-import kivy
-
-from kivy.app import App
 from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
 from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
-from kivy.uix.screenmanager import Screen, ScreenManager
+from kivy.uix.screenmanager import Screen
 
 from bd import *
+from main import Deckshop
 
-class Deckshop(App):
-    
-    def build(self):
-        show_screen = ScreenManager()
-        show_screen.add_widget(Menu(name = 'Tela 01'))
-        show_screen.add_widget(Cadastrar(name = 'Tela 02')) # add nome 
-        show_screen.add_widget(Editar(name = 'Tela 03'))
-        show_screen.add_widget(Excluir(name = 'Tela 04'))
-        show_screen.add_widget(Mostrar(name = 'Tela 05'))
-        show_screen.current = 'Tela 01'
+bd = BancoD()
 
-        return show_screen
-    
+
 class Menu(Screen):
     def __init__(self, **kwargs):
         super(Screen,self).__init__(**kwargs)
@@ -32,7 +20,7 @@ class Menu(Screen):
         grid = GridLayout(cols = 1)
         
         
-        self.info = Label(text = "Seja Bem vindo à Deckshop")
+        self.info = Label(text = "Seja Bem vindo a Deckshop")
         
         self.btn_cadastrar = Button(text = "Cadastrar Produto")
         self.btn_Editar = Button(text = "Editar")
@@ -73,11 +61,11 @@ class Menu(Screen):
     def show_sair(self, sair):
         Deckshop().stop()
         
+
 class Cadastrar(Screen):
     def __init__(self, **kwargs):
         super(Screen,self).__init__(**kwargs)
         
-        self.bd = BancoD()
         
         layout = BoxLayout(orientation = "vertical")
         grid = GridLayout(cols = 1)
@@ -103,13 +91,21 @@ class Cadastrar(Screen):
     
     def show_insert(self, insert):
         
-        self.bd.insert_table(f"{self.inp_prod.text}", f"{self.inp_quant.text}")
-
+        try:
+            bd.insert_table(f"{self.inp_prod.text}", f"{self.inp_quant.text}")
+            if bd:
+                self.inp_prod.text = "Cadastro concluido com sucesso"
+                self.inp_quant.text = "Cadastro concluido com sucesso"
+                
+        except:
+            self.inp_prod.text = "Este produto não existe"
+            self.inp_quant.text = "Este produto não existe"
+            
+            
 class Editar(Screen):
     def __init__(self, **kwargs):
         super(Screen,self).__init__(**kwargs)
         
-        self.bd = BancoD()
         
         layout = BoxLayout(orientation = "vertical")
         grid = GridLayout(cols = 1)
@@ -139,21 +135,33 @@ class Editar(Screen):
         self.manager.current = "Tela 01"
         
     def show_editar(self, update):
+        try:
+            bd.update_table(f"{self.inp_prod.text}", f"{self.inp_quant.text}", self.inp_id.text)
+            if bd:
+                self.inp_prod.text = "Editado com sucesso"
+                self.inp_quant.text = "Editado com sucesso"
+        except:
+            self.inp_prod.text = "Este produto não existe"
+            self.inp_quant.text = "Este produto não existe"
         
-        self.bd.update_table(f"{self.inp_prod.text}", f"{self.inp_quant.text}", self.inp_id.text)
         
     def show_procurar(self, procurar):
         
-        self.bd.select_id_table(self.inp_id.text)
-        self.inp_prod.text = f"{self.bd.i}"
-        self.inp_quant.text = f"{self.bd.a}"
+        try:
+           
+            bd.select_id_table(self.inp_id.text)
+            self.inp_prod.text = f"{bd.i}"
+            self.inp_quant.text = f"{bd.a}"
+            
+        except:
+            self.inp_prod.text = "Este produto não existe"
+            self.inp_quant.text = "Este produto não existe"
 
         
 class Excluir(Screen):
     def __init__(self, **kwargs):
         super(Screen,self).__init__(**kwargs)
-        
-        self.bd = BancoD()
+
         
         layout = BoxLayout(orientation = "vertical")
         grid = GridLayout(cols = 1)
@@ -185,22 +193,29 @@ class Excluir(Screen):
     def show_procurar(self, procurar):
         try:
            
-            self.bd.select_id_table(self.inp_id.text)
-            self.inp_prod.text = f"{self.bd.i}"
-            self.inp_quant.text = f"{self.bd.a}"
-        except:
-            self.inp_prod.text = "Não existe este produto"
-            self.inp_quant.text = "Não existe este produto"
+            bd.select_id_table(self.inp_id.text)
+            self.inp_prod.text = f"{bd.i}"
+            self.inp_quant.text = f"{bd.a}"
+            
+        except AttributeError:
+            self.inp_prod.text = "Este produto não existe"
+            self.inp_quant.text = "Este produto não existe"
             
     def show_excluir(self, excluir):
-        
-        self.bd.delete(self.inp_id.text)
-        
+        try:
+            bd.delete(self.inp_id.text)
+            if bd:
+                self.inp_prod.text = "Excluido com sucesso"
+                self.inp_quant.text = "Excluido com sucesso"
+        except:
+            self.inp_prod.text = "Este produto não existe"
+            self.inp_quant.text = "Este produto não existe"
+            
+
 class Mostrar(Screen):
     def __init__(self, **kwargs):
         super(Screen,self).__init__(**kwargs)
         
-        self.bd = BancoD()
         
         layout = BoxLayout(orientation = "vertical")
         grid = GridLayout(cols = 1)
@@ -229,13 +244,11 @@ class Mostrar(Screen):
     def show_procurar(self, procurar):
         try:
             
-            self.bd.select_id_table(self.inp_id.text)
-            self.inp_prod.text = f"{self.bd.i}"
-            self.inp_quant.text = f"{self.bd.a}"
+            bd.select_id_table(self.inp_id.text)
+            self.inp_prod.text = f"{bd.i}"
+            self.inp_quant.text = f"{bd.a}"
             
-        except:
-            self.inp_prod.text = "Não existe este produto"
-            self.inp_quant.text = "Não existe este produto"
-        
-if __name__ == '__main__':
-    Deckshop().run()
+        except AttributeError:
+            
+            self.inp_prod.text = "Este produto não existe"
+            self.inp_quant.text = "Este produto não existe"
