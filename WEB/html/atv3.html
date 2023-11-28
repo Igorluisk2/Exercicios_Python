@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body>
+
+    <form>
+        <fieldset id="pessoal">
+            <legend>Dados pessoais</legend>
+            <label for="fname">Primeiro nome:</label><br>
+            <input type="text" id="fname" name="fname" required><br>
+
+            <label for="lname">Último nome:</label><br>
+            <input type="text" id="lname" name="lname" required><br>
+            
+            <label for="fname">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="lname">Nome da Mãe:</label><br>
+            <input type="text" id="mname" name="mname" required><br>
+             
+            <label for="fname">Telefone:</label><br>
+            <input type="number" id="tel" name="tel" required><br>
+                    
+        </fieldset>
+        
+        <fieldset id="endereço">
+            <legend>Endereço</legend>
+            <p>Rua: <input type="text" name="rua" id="rua" size="20" maxlength="30" placeholder="Nome da sua rua">
+            </p>
+            <p>Bairro: <input type="text" name="bairro" id="bairro" size="20" maxlength="30" placeholder="Nome do seu Bairro">
+            </p>
+            <p>Número: <input type="number" name="numero" id="numero" size="20" maxlength="30" placeholder="Número da sua Casa">
+            </p>
+            <p>Cidade: <input type="text" name="cidade" id="cidade" size="20" maxlength="30" placeholder="Sua Cidade">
+            </p>
+            <p>Estado: <input type="text" name="estado" id="estado" size="20" maxlength="2" placeholder="Seu estado">
+            </p>
+
+        </fieldset>
+        
+        <br>
+
+        <fieldset id="Dados Financeiros">
+            <legend>Dados Financeiros</legend>         
+            
+            <p>Qual a sua linguagem preferida?</p>
+            <input type="number" id="html" name="fav_language" value="HTML">
+            <label for="html">Salario</label><br>
+
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+
+            <input type="radio" id="javascript" name="fav_language" value="javascript">
+            <label for="javascript">JavaScript</label><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset id="checkbox">
+            <legend>Dados comerciais</legend>
+            <p>Qual a sua linguagem preferida?</p>
+
+            <input type="checkbox" id="html2" name="fav_language" value="HTML2">
+            <label for="html2">HTML</label><br>
+
+            <input type="checkbox" id="css2" name="fav_language" value="CSS2">
+            <label for="css2">CSS</label><br>
+
+            <input type="checkbox" id="javascript2" name="fav_language" value="javascript2">
+            <label for="javascript2">JavaScript</label><br>
+        </fieldset>
+
+        <br>
+
+
+        <fieldset id="Cadastro veiculo">
+            <legend>Cadastro de Veículo</legend>
+            <p>Modelo: <input type="text" name="email" id="campoe" size="20" maxlength="30"
+                    placeholder="Corolla"></p>
+            <p>Ano: <input type="number" name="email" id="campoe" size="20" maxlength="30"
+                    placeholder="Corolla"></p>
+            <p>Placa: <input type="text" name="email" id="campoe" size="20" maxlength="30"
+                    placeholder="PCG600"></p>
+            <p>Cor: <input type="text" name="email" id="campoe" size="20" maxlength="30"
+                    placeholder="PCG600"></p>
+            
+                    
+        </fieldset>
+
+        <fieldset id="senha">
+            <legend>cadastro imóvel</legend>
+            <p>Senha: <input type="password" name="Senha" id="campos" size="20" maxlength="12" placeholder="abc@123">
+            </p>
+        </fieldset>
+
+        <fieldset id="data">
+            <legend>Dados Conjuge</legend>
+            <p>Data nascimento: <input type="date" name="Senha" id="campos=d" size="20" maxlength="10"
+                    placeholder="00-00-0000">
+            </p>
+        </fieldset>
+
+
+
+
+    </form>
+
+
+</body>
+
+</html>
