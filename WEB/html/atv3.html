@@ -9,7 +9,7 @@
 
 <body>
 
-    <form>
+    <form action="send.php" method="post">
         <fieldset id="pessoal">
             <legend>Dados pessoais</legend>
             <label for="fname">Primeiro nome:</label><br>
@@ -31,17 +31,17 @@
         
         <fieldset id="endereço">
             <legend>Endereço</legend>
-            <p>Rua: <input type="text" name="rua" id="rua" size="20" maxlength="30" placeholder="Nome da sua rua">
+            <p>CEP: <input type="number" name="cep" id="cep" size="20" maxlength="8" placeholder="Seu CEP"><br>
             </p>
-            <p>Bairro: <input type="text" name="bairro" id="bairro" size="20" maxlength="30" placeholder="Nome do seu Bairro">
+            <p>Rua: <input type="text" name="rua" id="rua" size="20" maxlength="30" placeholder="Nome da sua rua"><br>
             </p>
-            <p>Número: <input type="number" name="numero" id="numero" size="20" maxlength="30" placeholder="Número da sua Casa">
+            <p>Número: <input type="number" name="numero" id="numero" size="20" maxlength="30" placeholder="Número da sua Casa"><br>
             </p>
-            <p>Cidade: <input type="text" name="cidade" id="cidade" size="20" maxlength="30" placeholder="Sua Cidade">
+            <p>Cidade: <input type="text" name="cidade" id="cidade" size="20" maxlength="30" placeholder="Sua Cidade"><br>
             </p>
-            <p>Estado: <input type="text" name="estado" id="estado" size="20" maxlength="2" placeholder="Seu estado">
+            <p>Estado: <input type="text" name="estado" id="estado" size="20" maxlength="2" placeholder="Seu estado"><br>
             </p>
-
+            
         </fieldset>
         
         <br>
@@ -49,16 +49,13 @@
         <fieldset id="Dados Financeiros">
             <legend>Dados Financeiros</legend>         
             
-            <p>Qual a sua linguagem preferida?</p>
-            <input type="number" id="html" name="fav_language" value="HTML">
-            <label for="html">Salario</label><br>
-
-            <input type="radio" id="css" name="fav_language" value="CSS">
-            <label for="css">CSS</label><br>
-
-            <input type="radio" id="javascript" name="fav_language" value="javascript">
-            <label for="javascript">JavaScript</label><br>
+            <p>Salário: <input type="text" name="salario" id="salario" required></p>
+            <p>Conta Bancária: <input type="text" name="conta_bancaria" id="conta_bancaria" required></p>
+            <p>Cartão de Crédito: <input type="text" name="cartao_credito" id="cartao_credito" required></p>
+            <p>Investimentos: <input type="text" name="investimentos" id="investimentos" required></p>
+            <p>Dívidas: <input type="text" name="dividas" id="dividas" required></p>
         </fieldset>
+
 
         <br>
 
@@ -81,13 +78,13 @@
 
         <fieldset id="Cadastro veiculo">
             <legend>Cadastro de Veículo</legend>
-            <p>Modelo: <input type="text" name="email" id="campoe" size="20" maxlength="30"
+            <p>Modelo: <input type="text" name="modelo" id="modelo" size="20" maxlength="30"
                     placeholder="Corolla"></p>
-            <p>Ano: <input type="number" name="email" id="campoe" size="20" maxlength="30"
+            <p>Ano: <input type="number" name="ano" id="ano" size="20" maxlength="30"
                     placeholder="Corolla"></p>
-            <p>Placa: <input type="text" name="email" id="campoe" size="20" maxlength="30"
+            <p>Placa: <input type="text" name="placa" id="placa" size="20" maxlength="30"
                     placeholder="PCG600"></p>
-            <p>Cor: <input type="text" name="email" id="campoe" size="20" maxlength="30"
+            <p>Cor: <input type="text" name="cor" id="cor" size="20" maxlength="30"
                     placeholder="PCG600"></p>
             
                     
@@ -108,7 +105,7 @@
 
 
 
-
+        <input type="submit" value="Enviar">
     </form>
 
 

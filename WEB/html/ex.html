@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+
+<form action="send.php" method="post">
+
+    <!-- Dados Pessoais -->
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        Nome: <input type="text" name="nome" required><br>
+        Idade: <input type="number" name="idade" required><br>
+        Gênero: 
+        <select name="genero" required>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+        </select><br>
+        Email: <input type="email" name="email" required><br>
+        Telefone: <input type="tel" name="telefone" required><br>
+    </fieldset>
+
+    <!-- Endereço -->
+    <fieldset>
+        <legend>Endereço</legend>
+        Rua: <input type="text" name="rua" required><br>
+        Número: <input type="text" name="numero" required><br>
+        Cidade: <input type="text" name="cidade" required><br>
+        Estado: <input type="text" name="estado" required><br>
+        CEP: <input type="text" name="cep" required><br>
+    </fieldset>
+
+    <!-- Dados Financeiros -->
+    <fieldset>
+        <legend>Dados Financeiros</legend>
+        Salário: <input type="text" name="salario" required><br>
+        Conta Bancária: <input type="text" name="conta_bancaria" required><br>
+        Cartão de Crédito: <input type="text" name="cartao_credito" required><br>
+        Investimentos: <input type="text" name="investimentos" required><br>
+        Dívidas: <input type="text" name="dividas" required><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Dados Comerciais</legend>
+        Nome da Empresa: <input type="text" name="nome_empresa" required><br>
+        CNPJ: <input type="text" name="cnpj" required><br>
+        Ramo de Atividade: <input type="text" name="ramo_atividade" required><br>
+        Faturamento Mensal: <input type="text" name="faturamento_mensal" required><br>
+        Número de Funcionários: <input type="number" name="num_funcionarios" required><br>
+    </fieldset>
+    
+    <!-- Cadastro Veículo -->
+    <fieldset>
+        <legend>Cadastro Veículo</legend>
+        Marca: <input type="text" name="marca_veiculo" required><br>
+        Modelo: <input type="text" name="modelo_veiculo" required><br>
+        Ano: <input type="text" name="ano_veiculo" required><br>
+        Placa: <input type="text" name="placa_veiculo" required><br>
+        Cor: <input type="text" name="cor_veiculo" required><br>
+    </fieldset>
+    
+    <!-- Cadastro Imóvel -->
+    <fieldset>
+        <legend>Cadastro Imóvel</legend>
+        Tipo de Imóvel: <input type="text" name="tipo_imovel" required><br>
+        Endereço do Imóvel: <input type="text" name="endereco_imovel" required><br>
+        Valor do Imóvel: <input type="text" name="valor_imovel" required><br>
+        Área do Imóvel: <input type="text" name="area_imovel" required><br>
+        Número de Quartos: <input type="number" name="num_quartos_imovel" required><br>
+    </fieldset>
+    
+    <!-- Dados Cônjuge -->
+    <fieldset>
+        <legend>Dados Cônjuge</legend>
+        Nome do Cônjuge: <input type="text" name="nome_conjuge"><br>
+        Idade do Cônjuge: <input type="number" name="idade_conjuge"><br>
+        Profissão do Cônjuge: <input type="text" name="profissao_conjuge"><br>
+        Renda do Cônjuge: <input type="text" name="renda_conjuge"><br>
+        Contato do Cônjuge: <input type="text" name="contato_conjuge"><br>
+    </fieldset>
+    
+    <!-- Dados Filhos -->
+    <fieldset>
+        <legend>Dados Filhos</legend>
+        Quantidade de Filhos: <input type="number" name="quantidade_filhos"><br>
+        Nomes dos Filhos: <input type="text" name="nomes_filhos"><br>
+        Idades dos Filhos: <input type="text" name="idades_filhos"><br>
+        Escolaridade dos Filhos: <input type="text" name="escolaridade_filhos"><br>
+        Outras Informações sobre os Filhos: <textarea name="outras_informacoes_filhos"></textarea><br>
+    </fieldset>
+    
+    <!-- Dados Formação Escolar -->
+    <fieldset>
+        <legend>Dados Formação Escolar</legend>
+        Nível de Escolaridade: <input type="text" name="nivel_escolaridade"><br>
+        Instituição de Ensino: <input type="text" name="instituicao_ensino"><br>
+        Curso: <input type="text" name="curso"><br>
+        Ano de Conclusão: <input type="text" name="ano_conclusao"><br>
+        Certificações: <input type="text" name="certificacoes"><br>
+    </fieldset>
+    
+    
+    <input type="submit" value="Enviar">
+</form>
+
+</body>
+</html>
