@@ -13,38 +13,38 @@
         <fieldset id="pessoal">
             <legend>Dados pessoais</legend>
             <label for="fname">Primeiro nome:</label><br>
-            <input type="text" id="fname" name="fname" required><br>
+            <input type="text" id="fnameid" name="fname" required><br>
 
             <label for="lname">Último nome:</label><br>
-            <input type="text" id="lname" name="lname" required><br>
+            <input type="text" id="lnameid" name="lname" required><br>
 
             <label for="fname">Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
+            <input type="email" id="emailid" name="email" required><br>
 
             <label for="lname">Nome da Mãe:</label><br>
-            <input type="text" id="mname" name="mname" required><br>
+            <input type="text" id="mnameid" name="mname" required><br>
 
             <label for="fname">Telefone:</label><br>
-            <input type="number" id="tel" name="tel" required><br>
+            <input type="number" id="telid" name="tel" required><br>
 
         </fieldset>
 
         <fieldset id="endereço">
-            <legend>Endereço</legend>
+            <legend>Dados Endereço</legend>
             <label for="cep">CEP</label>:
-            <input type="number" id="cep" name="cep" size="20" maxlength="8" required><br><br>
+            <input type="number" id="cepid" name="cep" size="20" maxlength="8" required><br><br>
 
             <label for="rua">Rua</label>:
-            <input type="text" id="rua" name="rua" required><br><br>
+            <input type="text" id="ruaid" name="rua" required><br><br>
 
             <label for="numero">Número</label>:
-            <input type="number" id="numero" name="numero" required><br><br>
+            <input type="number" id="numeroid" name="numero" required><br><br>
 
             <label for="cidade">Cidade</label>:
-            <input type="text" id="cidade" name="cidade" required><br><br>
+            <input type="text" id="cidadeid" name="cidade" required><br><br>
 
             <label for="estado">Estado</label>:
-            <input type="text" id="estado" name="estado" required><br>
+            <input type="text" id="estadoid" name="estado" required><br>
 
         </fieldset>
 
@@ -53,30 +53,30 @@
         <fieldset id="Dados Financeiros">
             <legend>Dados Financeiros</legend>
 
-            <label for="salario">Salário:</label> <input type="number" name="salario" id="salario" required><br><br>
+            <label for="salario">Salário:</label> <input type="number" name="salario" id="salarioid" required><br><br>
             <label for="Conta bancária">Conta Bancária:</label> <input type="number" name="conta_bancaria"
-                id="conta_bancaria" required><br><br>
+                id="conta_bancariaid" required><br><br>
             <label for="cartao de Crédito">Cartão de Crédito: </label> <input type="number" name="cartao_credito"
-                id="cartao_credito" required><br><br>
-            <label for="Investimentos">Investimentos:</label> <input type="text" name="investimentos" id="investimentos"
+                id="cartao_creditoid" required><br><br>
+            <label for="Investimentos">Investimentos:</label> <input type="text" name="investimentos" id="investimentosid"
                 required><br><br>
-            <label for="dividas">Dívidas:</label> <input type="number" name="dividas" id="dividas" required><br>
+            <label for="dividas">Dívidas:</label> <input type="number" name="dividas" id="dividasid" required><br>
         </fieldset>
 
 
         <br>
 
         <fieldset id="dados comerciais">
-            <legend>Dados comerciais</legend>
+            <legend>Dados Comerciais</legend>
             <label for="nome da empresa">Nome da Empresa:</label> <input type="text" name="nome_empresa"
-                id="nome_empresa" required><br><br>
+                id="nome_empresaid" required><br><br>
             <label for="cnpj">CNPJ:</label> <input type="text" name="cnpj" id="cnpj" required><br><br>
             <label for="ramo de atividade">Ramo de Atividade:</label> <input type="text" name="ramo_atividade"
-                id="ramo_atividade" required><br><br>
+                id="ramo_atividadeid" required><br><br>
             <label for="faturamento mensal">Faturamento Mensal:</label> <input type="text" name="faturamento_mensal"
-                id="faturamento_mensal" required><br><br>
+                id="faturamento_mensalid" required><br><br>
             <label for="numero de funcionarios">Número de Funcionários:</label> <input type="number"
-                name="num_funcionarios" id="num_funcionarios" required><br>
+                name="num_funcionarios" id="num_funcionariosid" required><br>
         </fieldset>
 
         <br>
@@ -84,30 +84,30 @@
 
         <fieldset id="Cadastro veiculo">
             <legend>Cadastro de Veículo</legend>
-            <label for="marca">Marca:</label> <input type="text" name="marca_veiculo" id="marca_veiculo"
+            <label for="marca">Marca:</label> <input type="text" name="marca_veiculo" id="marca_veiculoid"
                 placeholder="Toyota" required><br><br>
-            <label for="modelo">Modelo:</label> <input type="text" name="modelo" id="modelo" placeholder="Corolla"
+            <label for="modelo">Modelo:</label> <input type="text" name="modelo" id="modeloid" placeholder="Corolla"
                 required><br><br>
             <label for="Ano">Ano:</label> <input type="number" name="ano" id="ano" placeholder="22-23" required><br><br>
-            <label for="placa">Placa:</label> <input type="text" name="placa" id="placa" placeholder="BRA2E19"
+            <label for="placa">Placa:</label> <input type="text" name="placa" id="placaid" placeholder="BRA2E19"
                 required><br><br>
-            <label for="Cor">Cor:</label> <input type="text" name="cor" id="cor" placeholder="Azul" required><br>
+            <label for="Cor">Cor:</label> <input type="text" name="cor" id="corid" placeholder="Azul" required><br>
 
 
         </fieldset>
 
         <fieldset id="cadastro imovel">
             <legend>Cadastro Imóvel</legend>
-            <label for="tipo de imovel">Tipo de Imóvel:</label> <input type="text" name="tipo_imovel" id="tipo_imovel"
+            <label for="tipo de imovel">Tipo de Imóvel:</label> <input type="text" name="tipo_imovel" id="tipo_imovelid"
                 required><br><br>
             <label for="endereco do imovel">Endereço do Imóvel:</label> <input type="text" name="endereco_imovel"
-                id="endereco_imovel" required><br><br>
+                id="endereco_imovelid" required><br><br>
             <label for="valor do imovel">Valor do Imóvel:</label> <input type="number" name="valor_imovel"
-                id="valor_imovel" required><br><br>
-            <label for="area do imovel">Área do Imóvel:</label> <input type="text" name="area_imovel" id="area_imovel"
+                id="valor_imovelid" required><br><br>
+            <label for="area do imovel">Área do Imóvel:</label> <input type="text" name="area_imovel" id="area_imovelid"
                 required><br><br>
             <label for="numero de quartos">Número de Quartos:</label> <input type="number" name="num_quartos_imovel"
-                id="num_quartos_imovel" required><br>
+                id="num_quartos_imovelid" required><br>
 
         </fieldset>
 
@@ -120,32 +120,36 @@
             <label for="profissao do conjuge">Profissão do Cônjuge:</label> <input type="text" name="profissao_conjuge"
                 id="profissao_conjuge" required><br><br>
             <label for="renda do conjuge">Renda do Cônjuge:</label> <input type="number" name="renda_conjuge"
-                id="renda_conjuge" required><br><br>
+                id="renda_conjugeid" required><br><br>
             <label for="contato do conjuge">Contato do Cônjuge:</label> <input type="number" name="contato_conjuge"
-                id="contato_conjuge" required><br>
+                id="contato_conjugeid" required><br>
 
         </fieldset>
 
         <fieldset id="dados filhos">
             <legend>Dados Filhos</legend>
             <label for="quantidade de filhos">Quantidade de Filhos:</label> <input type="number"
-                name="quantidade_filhos" id="quantidade_filhos" required><br><br>
+                name="quantidade_filhos" id="quantidade_filhosid" required><br><br>
             <label for="nome do primeiro filho"></label>Nome do primeiro Filho: <input type="text" name="nome_pfilho"
-                id="nome_pfilho" required><br><br>
+                id="nome_pfilhoid" required><br><br>
             <label for="data de nascimento primeiro filho">Data de nascimento do primeiro filho:</label> <input
-                type="date" name="nasc_pfilho" id="nasc_pfilho" required><br><br>
+                type="date" name="nasc_pfilho" id="nasc_pfilhoid" required><br><br>
             <label for="escolaridade do primeiro filho">Escolaridade do primeiro filho:</label> <input type="text"
-                name="escolaridade_pfilho" id="escolaridade_pfilho" required><br><br>
+                name="escolaridade_pfilho" id="escolaridade_pfilhoid" required><br><br>
             <label for="outras informacoes sobre o primeiro filho"></label>Outras Informações sobre o primeiro Filho:
-            <textarea name="outras_informacoes_pfilho" id="outras_informacoes_pfilho" required></textarea><br>
+            <textarea name="outras_informacoes_pfilho" id="outras_informacoes_pfilhoid" required></textarea><br>
         </fieldset>
 
         <fieldset id="dados formacao escolar">
             <legend>Dados Formação Escolar</legend>
+            
             <label for="nivel de escolaridade:">Nível de Escolaridade:</label> <input type="text"
                 name="nivel_escolaridade" id="nivel_escolaridadeid" required><br><br>
+
             <label for="instituicao de ensino">Instituição de Ensino:</label> <input type="text"
                 name="instituicao_ensino" id="instituicao_ensinoid" required><br><br>
+
+                
             <label for="curso">Curso:</label> <input type="text" name="curso" id="cursoid" required><br><br>
             <label for="ano de conclusao">Ano de Conclusão:</label> <input type="number" name="ano_conclusao"
                 id="ano_conclusaoid" required><br><br>
@@ -161,5 +165,7 @@
 
 
 </body>
+
+
 
 </html>

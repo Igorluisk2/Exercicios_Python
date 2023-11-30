@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Forms</title>
+</head>
+<body>
+    <h4>Atividade 29/11/2023 - João Carlo Freitas</h4>
+    <form>
+        <fieldset><legend>Dados Pessoais</legend>
+            <label for="fname">Nome: </label>
+            <input type="text" placeholder="Ederson" maxlength="5" size="20" id="fname" name="fname" required><br><br>
+            <label for="lname">Sobrenome: </label>
+            <input type="text" placeholder="da Costa" id="lname" name="lname" size="20"  required><br><br>
+            
+            <label for="sexo">Sexo: </label>
+            <input type="radio" id="M" name="sex" value="M">
+            <label for="M">Masculino</label>
+            <input type="radio" id="F" name="sex" value="F">
+            <label for="F">Feminino</label>
+            <input type="radio" id="O" name="sex" value="O">
+            <label for="O">Outro</label><br>
+            
+            
+            <p>E-Mail: <input type="email" name="joaocarlofreitas@hotmail.com" id="campoe"
+                size="20" maxlength="50"
+                placeholder="exemplo@gmail.com"></p>
+            <p>Data de Nascimento: <input type="date" name="date" id="campos=date" size="20" maxlength="10" placeholder="DD-MM-AAA"></p>
+        </fieldset>
+        <br>
+        <fieldset><legend>Endereço</legend>
+            <label for="streetname">Rua: </label>
+            <input type="text" placeholder="Nome da Rua" size="45" maxlength="100" name="streetname" required><br>
+            <br>
+            <label for="bairro">Bairro: </label>
+            <input type="text" placeholder="Centro" size="10" maxlength="50" name="bairro" required>
+            <br><br>
+            <label for="streetnumber">Número: </label>
+            <input type="number" placeholder="123" name="streetnumber" required>
+            <br><br>
+            <label for="complemento">Complemento: </label>
+            <input type="text" placeholder="AP-X" name="complemento" size="5" maxlength="50" required>
+            <br><br>
+            <label for="cep">CEP: </label>
+            <input type="text" placeholder="000.000.000-00" size="10" maxlength="14" name="cep" required>
+            <br><br>
+        </fieldset>
+        <br>
+        <fieldset><legend>Dados Financeiros</legend>
+        <label for="titularnome">Nome do Titular: </label>
+        <input type="text" placeholder="Ederson da Costa" name="titularnome" size="25" required><br>
+        <br>
+        <label for="rendamensal">Renda Mensal: </label>
+        <input type="text" size="5" maxlength="10" name="rendamensal" placeholder="1000.00" required><br>
+        <br>
+        
+        <label for="mais18">Maior de 18 anos: </label>
+        <input type="radio" id="S" name="mais18" value="S">
+        <label for="S">Sim</label>
+        <input type="radio" id="N" name="mais18" value="N">
+        <label for="N">Não</label>
+        <br><br>
+        
+        <label for="bankname">Nome do Banco:</label>
+        <input type="text" placeholder="Bradesco" name="bankname" required>
+            <br><br>
+        <label for="agencia">Agência: </label>
+        <input type="number" required>
+        
+        </fieldset>
+<br>
+<fieldset>
+    <legend>Dados Comerciais</legend>
+
+    <label for="nomeEmpresa">Nome da Empresa:</label>
+    <input type="text" id="nomeEmpresa" name="nomeEmpresa" required>
+    <br><br>
+    <label for="cnpj">CNPJ:</label>
+    <input type="text" id="cnpj" name="cnpj" required>
+    <br><br>
+    <label for="endereco2">Endereço:</label>
+    <input type="text" id="endereco2" name="endereco2" required>
+    <br><br>
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" required>
+    <br><br>
+    <label for="email2">E-mail:</label>
+    <input type="email" id="email2" name="email2" required>
+
+</fieldset>
+<br>
+<fieldset>
+    <legend>Cadastro de Veículo</legend>
+
+    <label for="marca">Marca:</label>
+    <input type="text" id="marca" name="marca" required>
+    <br><br>
+    <label for="modelo">Modelo:</label>
+    <input type="text" id="modelo" name="modelo" required>
+    <br><br>
+    <label for="ano">Ano:</label>
+    <input type="number" id="ano" name="ano" required>
+    <br><br>
+    <label for="placa">Placa:</label>
+    <input type="text" id="placa" name="placa" required>
+    <br><br>
+    <label for="cor">Cor:</label>
+    <input type="text" id="cor" name="cor" required>
+
+</fieldset>
+<br>
+<fieldset>
+    <legend>Cadastro de Imóvel</legend>
+
+    <label for="tipoImovel">Tipo de Imóvel:</label>
+    <input type="text" id="tipoImovel" name="tipoImovel" required>
+    <br><br>
+    <label for="endereco3">Endereço:</label>
+    <input type="text" id="endereco3" name="endereco" required>
+    <br><br>
+    <label for="numQuartos">Número de Quartos:</label>
+    <input type="number" id="numQuartos" name="numQuartos" required>
+    <br><br>
+    <label for="area">Área (m²):</label>
+    <input type="number" id="area" name="area" required>
+    <br><br>
+    <label for="descricao">Descrição:</label>
+    <textarea id="descricao" name="descricao" rows="4" required>
