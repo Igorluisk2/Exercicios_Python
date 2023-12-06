@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(0, 253, 0);
+    background: url(../../../deyvin.jpg) /*no-repeat*/;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
+    font-family: 'Times New Roman', Times, serif;
+    /* font: 35px Arial, bold sans-serif; */
+    font-style: italic;
+}
+
+p{
+    color: blueviolet;
+}
+
+h2{
+    right: 100px;
+    position: absolute;
+}
+
+h3{
+    color: tomato;
+    background-color: green;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
+    
+}
+
