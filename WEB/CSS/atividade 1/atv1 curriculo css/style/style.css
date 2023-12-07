@@ -1,0 +1,39 @@
+body{
+    background-color: cadetblue;
+}
+
+h1{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 48px;
+}
+
+a{
+    color: blueviolet;
+    padding-top: 50%;
+}
+
+nav{
+    background-color: black;
+}
+
+p{
+    text-align: center;
+}
+
+ul{
+    text-align: center;
+}
+
+b{
+    font-style: italic;
+
+}
+
+hr{
+    position: relative;
+    color: black;
+    border-style:solid;
+}
