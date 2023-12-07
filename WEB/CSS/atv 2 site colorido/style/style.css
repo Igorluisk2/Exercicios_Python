@@ -1,0 +1,33 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+header{
+    background-color: limegreen; /* Cor verde (substitua pela cor desejada) */
+    color: white;
+    text-align: center;
+    padding: 0px; /* Ajuste conforme necessário */
+    position: absolute; /* Torna a barra fixa na tela */
+    width: 100%; /* Ocupa toda a largura da tela */
+    top: 0; /* Fixa a barra no topo da tela */
+    z-index: 1000;
+}
+
+
+
+form{
+    color: white;
+    background-color:rgb(6, 91, 218);
+}
+
+footer{
+    background-color: rgb(56, 56, 56);
+    color: white;
+    text-align: center;
+    padding: 0px; /* Ajuste conforme necessário */
+    position: absolute; /* Torna a barra fixa na tela */
+    width: 100%; /* Ocupa toda a largura da tela */
+    down: 0; /* Fixa a barra no topo da tela */
+    z-index: 1000;
+}
