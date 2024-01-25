@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script></script>
+<script type="text/javascript" >
+
+    var product = prompt("Digite o nome do produto: ")
+    var preco = parseInt(prompt("Digite o valor unitário:"));
+    var qtd = parseInt(prompt("Digite a quantidade comprada."));
+    var porcentagem = parseInt(prompt("Digite o percentual de desconto a ser aplicado"));
+    var formula = ((porcentagem*preco*qtd)/100);
+    var total = (qtd * preco) - formula;
+    alert(`O Produto  comprado foi ${product}, com o valor total de ${total}.`);
+
+
+
+</script>
+
+</body>
+</html>

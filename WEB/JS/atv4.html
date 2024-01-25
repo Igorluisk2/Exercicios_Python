@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript" >
+    var nome = prompt("Nome: ")
+    var idade = prompt("Idade: ")
+    var sexo = prompt("Sexo: ")
+    alert(`Olá ${nome}, informe suas notas: `)
+    var nota1 = parseFloat(prompt("Primeira nota: "))
+    var nota2 = parseFloat(prompt("Segunda nota: "))
+    var media = ((nota1+nota2)/2)
+    document.write(`Aluno ${nome} sua media foi: <br> ${media}`)
+
+    var total = media>= 7? " Aprovado" : " reprovado"
+    
+    document.write(`${total}`)
+
+
+        
+    </script>
+
+
+</body>
+</html>
