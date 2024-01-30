@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 numeros e leia o maior o menor e se são iguais</title>
+</head>
+<body>
+    
+    <script>
+        let num1 = parseInt(prompt("Digite o primeiro número:"))
+        let num2 = parseInt(prompt("Digite o segundo número:"))
+        let num3 = parseInt(prompt("Digite o terceiro número:"))
+
+        if(num1>num2 && num1>num3 && num2>num3){
+            alert(num1+" é o maior e "+num3+" é o menor");
+        }
+        else if(num2>num1 && num2>num3 && num1>num3){
+            alert(num2+" é o maior e "+num3+" é o menor");
+        }
+        else if(num3>num2 && num3>num1 && num1>num2){
+            alert(num3+" é o maior e "+num2+" é o menor");
+        }
+        else if(num1>num2 && num1>num3 && num3>num2){
+            alert(num1+" é o maior e "+num2+" é o menor");
+        }
+        else if(num2>num1 && num2>num3 && num3>num1){
+            alert(num2+" é o maior e "+num1+" é o menor");
+        }
+        else if(num3>num2 && num3>num1 && num2>num1){
+            alert(num3+" é o maior e "+num1+" é o menor");
+        }
+        else if(num1==num2 || num2==num3 || num3==num1){
+            alert("VALORES IDENTICOS")
+        }
+        else{
+            alert("pare de tentar quebrar o código")
+        }
+
+
+    </script>
+
+</body>
+</html>

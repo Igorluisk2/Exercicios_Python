@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste de salario </title>
+</head>
+<body>
+    
+    <script>
+
+        while(true){
+            window.alert("AUMENTE SEU SALÁRIO AQUI");
+            let salario = parseFloat(prompt("Digite seu salário: "));
+            if(salario>1 && salario<=280){
+                alert("Seu salário antes do reajuste é de R$"+salario);
+                aumento= salario*20/100;
+                salarionovo = salario+(salario*20/100);
+                alert("Foi aplicado um aumento de 20%, ou seja R$"+aumento+" reais");
+                alert("Parabéns, seu novo salário é de R$"+salarionovo);
+            }
+            else if(salario>280 && salario<=700){
+                alert("Seu salário antes do reajuste é de R$"+salario);
+                aumento= salario*15/100;
+                salarionovo = salario+(salario*15/100);
+                alert("Foi aplicado um aumento de 15%, ou seja R$"+aumento+" reais");
+                alert("Parabéns, seu novo salário é de R$"+salarionovo);
+            }
+            else if(salario>700 && salario<=1500){
+                alert("Seu salário antes do reajuste é de R$"+salario);
+                aumento= salario*10/100;
+                salarionovo = salario+(salario*10/100);
+                alert("Foi aplicado um aumento de 10%, ou seja R$"+aumento+" reais");
+                alert("Parabéns, seu novo salário é de R$"+salarionovo);
+            }
+            
+            else if(salario>1500){
+                alert("Seu salário antes do reajuste é de R$"+salario);
+                aumento= salario*5/100;
+                salarionovo = salario+(salario*5/100);
+                alert("Foi aplicado um aumento de 5%, ou seja R$"+aumento+" reais");
+                alert("Parabéns, seu novo salário é de R$"+salarionovo);
+            }
+            else{
+                alert("ALGO DEU ERRADO, TENTE NOVAMENTE!")
+            }
+        }
+
+
+
+    </script>
+
+
+
+</body>
+</html>
