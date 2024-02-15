@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eleicao 3 candidatos</title>
+</head>
+<body>
+    
+    <script>
+
+        var eleitores = parseInt(prompt("quantidade de eleitores"))
+        var voto = 0
+        var candi_1 = 0
+        var candi_2 = 0
+        var candi_3 = 0
+
+        for (cont = 1; cont <= eleitores; cont++){
+            voto = parseInt(prompt("Qual candidato vc ira votar\n1 - Zé da Manga\n2 - Bob Esponja\n3 - O cara da maca"))  
+        };
+
+        switch(voto){
+            case 1:
+                candi_1 = parseInt(candi_1 + 1)
+                console.log(`${candi_1} votos para Zé da Manga`)
+                break
+
+            case 2:
+                candi_2 = parseInt(candi_2 + 1)
+                console.log(`${candi_2} votos para Bob Esponja`)
+                break
+
+            case 3:
+                candi_3 = parseInt(candi_3 + 1)
+                console.log(`${candi_3} votos para O cara da maca`)
+                break
+
+            default:
+                console.log("Vote em um candidato valido!!")
+        }
+
+        if (candi_1 > candi_2 && candi_1 > candi_3){
+            console.log(`O Zé da Manga ganhou com ${voto}`)
+        }
+
+        if (candi_2 > candi_1 && candi_2 > candi_3){
+            console.log(`O Zé da Manga ganhou com ${voto}`)
+        }
+
+        if (candi_3 > candi_1 && candi_3 > candi_2){
+            console.log(`O Zé da Manga ganhou com ${voto}`)
+        }   
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
