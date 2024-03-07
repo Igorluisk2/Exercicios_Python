@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07/03/24 ex DOM</title>
+    <link rel="stylesheet" href="./style23.css">
+</head>
+
+<body>
+
+    <main class="container-fluid">
+    <div class="container"></div>
+    <div class="shadow-lg"></div>
+        <h1>Que goleiro ficou parado em 30/01/21?</h1>
+        
+        <div class="padrao w-100" id="e" onclick="e()">Weverton</div>
+        <div class="padrao w-100" id="f" onclick="f()">John</div>
+        <div class="padrao w-100" id="g" onclick="g()">Deola</div>
+        <div class="padrao w-100" id="h" onclick="h()">Bento</div>
+        
+    </main>
+
+    <script>
+
+        function e(){
+            var e = window.document.getElementById("e")
+            e.innerText = 'Resposta Errada'
+            e.style.backgroundColor = "red"
+        }
+
+        function f(){
+            var f = window.document.getElementById("f")
+            f.innerText = 'Certa Resposta'
+            f.style.backgroundColor = "green"
+        }
+
+        function g(){
+            var g = window.document.getElementById("g")
+            g.innerText = 'Resposta Errada'
+            g.style.backgroundColor = "red"
+        }
+        function h(){
+            var h = window.document.getElementById("h")
+            h.innerText = 'Resposta Errada'
+            h.style.backgroundColor = "red"
+        }
+        
+    </script>
+</body>
+
+</html>

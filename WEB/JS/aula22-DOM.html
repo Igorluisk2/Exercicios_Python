@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07/03/24</title>
+</head>
+
+<body>
+    <p>Igor</p>
+    <p>Luis</p>
+    <p>Predo</p>
+
+    <h1>Quem descobriu o Brasil?</h1>
+
+    <div class="padrao" id="a" onclick="a()">Pedro Alvarez Cabral</div>
+
+
+    <script>
+        var p1 = document.getElementsByTagName('p')[2]  //muda a linha do elemento
+        p1.innerHTML = "blue"                           //muda para esse texto
+
+        function a() {
+            var a = window.document.getElementById("a")
+            a.innerText = 'Certa Resposta'
+            a.style.backgroundColor = "green"
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

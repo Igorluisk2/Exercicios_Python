@@ -1,0 +1,31 @@
+body{
+    background-color: whitesmoke;
+    background-repeat: none;
+    background-size: cover;
+}
+
+main{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 12.1%;
+}
+
+main div{
+    text-align: center;
+}
+
+
+main body.shadow-lg h1{
+    font-size: 57px;
+    background-color: yellow;
+    padding: 10px;
+    border: 1px solid black;
+    color: aliceblue;
+}
+
+main div p{
+    font-size: 27px;
+    background-color: lime;
+    padding: 20px;
+    border: 1px solid black;
+    color: aliceblue;
+}
