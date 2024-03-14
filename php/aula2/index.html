@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14/03/24</title>
+</head>
+
+<body>
+
+    <form action="action.php" method="post">
+        <fieldset id="Pessoal">
+            <legend>Dados Pessoais</legend>
+            <p>Nome <input type="text" name="nome" id="nome" size="20" maxlength="20" placeholder="Ex: João"></p>
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <br>
+    <form action="radio.php" method="post">
+        <fieldset id="Pessoal">
+
+            <b>Qual é o seu sistema operacional?</b><br>
+            <input type="radio" name="sistema" value="Windows 98" checked> Win98
+
+            <input type="radio" name="sistema" value="Windows XP"> Win XP
+        </fieldset>
+        <br>
+        <input type="submit">
+
+    </form>
+    <br>
+    <fieldset id="Professor">
+        <form action="action_check.php" method="post">
+            <b>Qual é o melhor Professor?</b><br>
+            <input type="checkbox" id="ederson" name="prof[]" value="Ederson" checked>
+            <label for="ederson">Ederson</label>
+            <input type="Checkbox" id="horns" name="prof[]" value="Ederson da Costa" />
+            <label for="Ederson costa">Ederson Costa</label>
+    </fieldset>
+    <br>
+    <input type="submit">
+    <br>
+
+
+
+
+
+
+
+
+    </form>
+
+
+
+
+</body>
+
+</html>
