@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <title>Informações do Formulário</title>
@@ -32,10 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $genero = $_POST["genero"];
     $cor = $_POST["cor"];
 
-    // Exibir os valores em uma tabela
+    //Tabela
     echo "<h2>Dados do Formulário</h2>";
     echo "<table>";
-    echo "<tr><th>Campo</th><th>Valor</th></tr>";
+    echo "<tr><th>Campo</th><th>Preenchido</th></tr>";
     echo "<tr><td>Nome</td><td>$nome</td></tr>";
     echo "<tr><td>RG</td><td>$rg</td></tr>";
     echo "<tr><td>CPF</td><td>$cpf</td></tr>";
