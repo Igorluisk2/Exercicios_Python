@@ -23,12 +23,22 @@ if (empty ($username) || empty ($password)){
 
 echo $row;
 
-if($row == 1){
-    header ('location:admin.html');
-    exit();
+$retorno = mysqli_fetch_array($result);
+
+
+if($row >= 1){
+    $_SESSION['nome'] = $username;
+    $_SESSION['setor'] = $retorno['setor'];
+    if($_SESSION['setor'] == 'admin'){
+        header('location:admin.php');
+        exit();
+    }else{
+        header('location: support.php');
+        exit();
+    }
 }
 else{
-    header('location: index.html');
+    header('location: index.php');
     exit();
 }
 
