@@ -1,6 +1,8 @@
 <?php
 include("verificacao.php");
-
+include("connect.php");
+$query = "SELECT * FROM FABRICAUSERS";
+$usuarios = mysqli_query($con,$query);
 ?>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link rel="stylesheet" href="./style.css">
@@ -59,21 +61,51 @@ include("verificacao.php");
 		<div class="col-md-10 content">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Bem-vindo
+                    Relatório dos cadastros
                 </div>
-                <div class="panel-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    			    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur similique 
-                    repudiandae assumenda quas odio quidem perspiciatis ea fuga, neque officia 
-                    ipsa dolor sint labore iusto. Quas dolorum esse fugit quia!
-                </div>
-            </div>
-		</div>
+				<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>RG</th>
+                        <th>Telefone</th>
+                        <th>Email</th>
+                        <th>Mãe</th>
+                        <th>Pai</th>
+                        <th>Rua</th>
+                        <th>Bairro</th>
+                        <th>Nº</th>
+                        <th>CEP</th>
+                        <th>Complemento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php while ($usuario = mysqli_fetch_array($usuarios)) { ?>
+                        <tr>
+                            <td><?php echo $usuario["name"]; ?></td>
+                            <td><?php echo $usuario["cpf"]; ?></td>
+                            <td><?php echo $usuario["rg"]; ?></td>
+                            <td><?php echo $usuario["telefone"]; ?></td>
+                            <td><?php echo $usuario["email"]; ?></td>
+                            <td><?php echo $usuario["mother"]; ?></td>
+                            <td><?php echo $usuario["father"]; ?></td>
+                            <td><?php echo $usuario["street"]; ?></td>
+                            <td><?php echo $usuario["neighborhood"]; ?></td>
+                            <td><?php echo $usuario["number"]; ?></td>
+                            <td><?php echo $usuario["cep"]; ?></td>
+                            <td><?php echo $usuario["complement"]; ?></td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
 		<footer class="pull-left footer">
 			<p class="col-md-12">
 				<hr class="divider">
